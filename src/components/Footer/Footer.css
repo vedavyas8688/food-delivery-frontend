@@ -1,95 +1,105 @@
- .footer {
+ /* ===== FOOTER BASE ===== */
+.footer {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: #ffffff;
-  padding: 80px 8% 30px;
-  margin-top: 100px;
+  padding: 70px 8% 25px;
+  margin-top: 90px;
   position: relative;
   overflow: hidden;
 }
 
+/* TOP GRADIENT LINE */
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #ff6b6b, #4ecdc4, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff6b6b,
+    #4ecdc4,
+    transparent
+  );
 }
 
+/* ===== GRID LAYOUT ===== */
 .footer-content {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 50px;
+  gap: 55px;
+  margin-bottom: 45px;
 }
 
+/* ===== LEFT SECTION ===== */
 .footer-content-left img {
-  width: 150px;
-  margin-bottom: 20px;
-  filter: brightness(1.2);
-  transition: transform 0.3s ease;
+  width: 145px;
+  margin-bottom: 18px;
+  filter: brightness(1.15);
+  transition: transform 0.25s ease;
 }
 
 .footer-content-left img:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .footer-content-left p {
-  font-size: 16px;
+  font-size: 15.5px;
   line-height: 1.8;
   color: #b8b8d1;
-  margin-bottom: 25px;
-  max-width: 450px;
+  max-width: 440px;
   font-weight: 300;
   letter-spacing: 0.3px;
-  text-align: justify;
 }
 
+/* ===== SOCIAL ICONS ===== */
 .footer-social-icons {
   display: flex;
-  gap: 15px;
+  gap: 14px;
+  margin-top: 22px;
 }
 
 .footer-social-icons img {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  padding: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  padding: 7px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
 }
 
 .footer-social-icons img:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-  box-shadow: 0 10px 25px rgba(78, 205, 196, 0.3);
+  box-shadow: 0 8px 20px rgba(78, 205, 196, 0.28);
 }
 
+/* ===== SECTION HEADERS ===== */
 .footer-content-center h2,
 .footer-content-right h2 {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 600;
-  margin-bottom: 25px;
-  color: #ffffff;
+  margin-bottom: 22px;
   position: relative;
-  display: inline-block;
 }
 
 .footer-content-center h2::after,
 .footer-content-right h2::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -7px;
   left: 0;
-  width: 40px;
+  width: 38px;
   height: 3px;
-  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
   border-radius: 2px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
 }
 
+/* ===== LISTS ===== */
 .footer-content-center ul,
 .footer-content-right ul {
   list-style: none;
@@ -99,77 +109,59 @@
 
 .footer-content-center ul li,
 .footer-content-right ul li {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
+  font-size: 14.5px;
   color: #b8b8d1;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 15px;
-  position: relative;
-  padding-left: 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  transition: all 0.25s ease;
 }
 
-.footer-content-center ul li:hover,
-.footer-content-right ul li:hover {
+.footer-content-center ul li:hover {
   color: #4ecdc4;
   padding-left: 8px;
 }
 
-.footer-content-center ul li::before {
-  content: '→';
-  position: absolute;
-  left: -20px;
-  opacity: 0;
-  transition: all 0.3s ease;
-  color: #4ecdc4;
-}
-
-.footer-content-center ul li:hover::before {
-  opacity: 1;
-  left: -5px;
-}
-
-/* Enhanced styling for contact info */
-.footer-content-right ul li {
-  font-weight: 400;
-  letter-spacing: 0.5px;
-}
-
 .footer-content-right ul li:hover {
-  transform: translateX(5px);
+  color: #4ecdc4;
+  transform: translateX(6px);
 }
 
- .Big-footer {
+/* ===== BRAND IMAGE ===== */
+.Big-footer {
   width: 100%;
-  max-width: 500px;
-  margin-top: 100px;
+  max-width: 320px;
+  margin-top: 45px;
   opacity: 0.95;
-  transition: all 0.4s ease;
- }
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
 
 .Big-footer:hover {
   opacity: 1;
-  transform: scale(1.08);
- }
+  transform: scale(1.06);
+}
 
+/* ===== DIVIDER ===== */
 .footer hr {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  margin: 50px 0 30px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  margin: 45px 0 25px;
 }
 
+/* ===== COPYRIGHT ===== */
 .footer-copyright {
   text-align: center;
-  font-size: 14px;
+  font-size: 13.5px;
   color: #8b8b9f;
-  letter-spacing: 0.5px;
-  padding: 10px 0;
+  letter-spacing: 0.4px;
 }
 
-/* Responsive Design */
+/* ===== TABLET ===== */
 @media (max-width: 1024px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;
@@ -181,27 +173,23 @@
   }
 
   .Big-footer {
-    max-width: 350px;
+    max-width: 280px;
   }
 }
 
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .footer {
-    padding: 60px 5% 25px;
+    padding: 55px 5% 22px;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer-content-left {
     text-align: center;
   }
 
   .footer-content-left p {
     max-width: 100%;
-    text-align: center;
   }
 
   .footer-social-icons {
@@ -214,27 +202,19 @@
     transform: translateX(-50%);
   }
 
-  .footer-content-center,
-  .footer-content-right {
-    text-align: center;
-  }
-
   .footer-content-right ul li {
     justify-content: center;
   }
 
   .Big-footer {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 300px;
+    margin: 35px auto 0;
   }
 }
 
+/* ===== SMALL MOBILE ===== */
 @media (max-width: 480px) {
   .footer {
-    padding: 40px 4% 20px;
-    margin-top: 60px;
+    padding: 40px 4% 18px;
   }
 
   .footer-content-left img {
@@ -242,17 +222,12 @@
   }
 
   .footer-social-icons img {
-    width: 35px;
-    height: 35px;
+    width: 34px;
+    height: 34px;
   }
 
   .footer-content-left p {
     font-size: 14px;
-  }
-
-  .Big-footer {
-    max-width: 250px;
-    margin-top: 35px;
   }
 
   .footer-content-right ul li {

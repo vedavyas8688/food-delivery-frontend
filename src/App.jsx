@@ -17,7 +17,7 @@ import PopUpForm from './components/PopUpForm/PopUpForm'
    return (
       <>
 
-      {showLogin ? <PopUpForm setShowLogin={setShowLogin} /> : <> </>}
+      {showLogin ? <PopUpForm setShowLogin={setShowLogin } /> : <> </>}
         <div className='App'>
        <Navbar setShowLogin={setShowLogin} />
 

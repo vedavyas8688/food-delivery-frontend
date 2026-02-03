@@ -16,3 +16,43 @@
     row-gap: 50px;
     margin-top: 30px;
 }
+
+/* Responsive adjustments for tablets and mobile */
+@media (max-width: 768px) {
+    .food-display {
+        margin-top: 24px;
+        padding: 0 16px;
+    }
+
+    .food-display h2 {
+        /* Slightly smaller on tablets/smaller screens */
+        font-size: clamp(20px, 3.5vw, 28px);
+        margin-bottom: 8px;
+    }
+
+    /* Make list single-column for better readability on narrow screens */
+    .food-display-list {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        row-gap: 26px;
+        margin-top: 20px;
+    }
+}
+
+/* Tighter adjustments for small mobile devices */
+@media (max-width: 480px) {
+    .food-display {
+        margin-top: 16px;
+        padding: 0 12px;
+    }
+
+    .food-display h2 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .food-display-list {
+        gap: 12px;
+        row-gap: 20px;
+    }
+}
