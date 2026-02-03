@@ -1,0 +1,84 @@
+ .header {
+  width: 100%;
+  padding: 30px 0;
+}
+
+ .header-contents {
+  width: 100%;
+  max-width: 1200px;
+  height: 570px;
+  margin: auto;
+
+  background: url("../../assets/header_img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 18px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left: 60px;
+ }
+
+ .header-contents h2 {
+   font-weight: 500;
+   color: white;
+   font-size: max(4.5vw,22px);
+}
+
+ .header-contents p {
+  margin-top: 50px;
+  color: white;
+  font-size: 20px;
+}
+
+ .header-btn {
+  margin-top: 25px;
+  width: fit-content;
+  padding: 8px 16px;
+
+  background: transparent;
+  color: #ffffff;
+
+  border: 1px solid #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.header-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+
+@keyframes  fadeIn {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+  
+}
+
+ @media (max-width: 768px) {
+  .header-contents {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .header-contents h2 {
+    font-size: 36px;
+  }
+
+  .header-contents p {
+    font-size: 13px;
+  }
+}
